@@ -25,7 +25,7 @@ public class MainApplication {
         applicationContext.refresh();
         System.out.println(applicationContext.getBean("xxx"));
         System.out.println(applicationContext.getBean("&xxx"));
-        // 为什么@autowired中 userMapper 也可以拿到值 是因为显byType 再byName 只有一个类型的一个Bean 只根据type获取就可以了
+        // 为什么@autowired中 userMapper 也可以拿到值 是因为先byType 再byName 只有一个类型的一个Bean 只根据type获取就可以了
         // 如果是两个bean 就会报错了
 
     }
